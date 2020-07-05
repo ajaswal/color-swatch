@@ -1,6 +1,6 @@
 import React from "react";
 import { convertHSLToRGB, convertBRGBToRGB } from "../../utils";
-import { Container, Column, ColorDetails, WhiteSpan } from "./Swatch.styled";
+import { Container, ColorColumn, ColorDetails, WhiteSpan } from "./Swatch.styled";
 
 const getRGBColors = ({ kind, components }) => {
   switch (kind) {
@@ -30,11 +30,11 @@ function Swatch({ colors }) {
   return (
     <Container>
       {rgbColors.map(({ components: { red, green, blue } }, index) => (
-        <Column key={index} bgColor={`rgb(${red}, ${green}, ${blue})`}>
+        <ColorColumn key={index} bgColor={`rgb(${red}, ${green}, ${blue})`}>
           <ColorDetails>
             <WhiteSpan>{`rgb(${red}, ${green}, ${blue})`}</WhiteSpan>
           </ColorDetails>
-        </Column>
+        </ColorColumn>
       ))}
     </Container>
   );

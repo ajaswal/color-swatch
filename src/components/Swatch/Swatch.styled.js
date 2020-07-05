@@ -5,7 +5,7 @@ const Container = styled.div`
   height: 100vh;
 `;
 
-const Column = styled.div`
+const ColorColumn = styled.div`
   flex: 1;
   background-color: ${(props) => props.bgColor};
 `;
@@ -22,4 +22,4 @@ const WhiteSpan = styled.span`
   padding: 5px;
 `;
 
-export { Container, Column, ColorDetails, WhiteSpan };
+export { Container, ColorColumn, ColorDetails, WhiteSpan };
