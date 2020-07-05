@@ -1,3 +1,11 @@
+/*
+Converts HSL to RGB
+
+Accepts an object and uses 
+hue, saturation and lightness.
+
+returns an object in RGB format
+*/
 const convertHSLToRGB = ({ hue, saturation, lightness }) => {
   saturation /= 100;
   lightness /= 100;
@@ -34,6 +42,7 @@ const convertHSLToRGB = ({ hue, saturation, lightness }) => {
     green = 0;
     blue = x;
   }
+
   red = Math.round((red + m) * 255);
   green = Math.round((green + m) * 255);
   blue = Math.round((blue + m) * 255);
@@ -41,4 +50,11 @@ const convertHSLToRGB = ({ hue, saturation, lightness }) => {
   return { red, green, blue };
 };
 
-export { convertHSLToRGB };
+const convertBRGBToRGB = (components) => {
+  return {
+    red: components.bred,
+    green: components.bgreen,
+    blue: components.bblue,
+  };
+};
+export { convertHSLToRGB, convertBRGBToRGB };

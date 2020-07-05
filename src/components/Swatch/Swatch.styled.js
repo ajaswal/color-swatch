@@ -7,6 +7,7 @@ const Container = styled.div`
 
 const Column = styled.div`
   flex: 1;
+  background-color: ${(props) => props.bgColor};
 `;
 
 const ColorDetails = styled.p`
